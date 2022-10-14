@@ -13,3 +13,5 @@ Discord server: https://discord.gg/qZNrCuu65k
 3. Add dog-bodycam/img to your-inventoryscript/html/img
 
 4. Add as your last resource in your server.cfg "ensure dog-bodycam"
+
+![My Image](https://user-images.githubusercontent.com/18469253/195879766-072fb823-d236-4b6f-89a2-6fc27537c6a9.png)
