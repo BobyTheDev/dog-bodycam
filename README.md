@@ -11,3 +11,5 @@ Discord server: https://discord.gg/qZNrCuu65k
 2. Configure the script to your liking in dog-bodycam/config.lua
 
 3. Add dog-bodycam/img to your-inventoryscript/html/img
+
+4. Add as your last resource in your server.cfg "ensure dog-bodycam"
