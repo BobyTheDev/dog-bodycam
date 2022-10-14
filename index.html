@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     
+        <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&effect=outline" rel="stylesheet" type="text/css"> 
+        <script src="script.js"></script>
+        <script src="scripting/external/jquery/jquery.js"></script>
+        <script src="scripting/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <style>
+            body { 
+                background-color: rgba(0, 0, 0, 0); 
+                margin: 0px auto; 
+                overflow: hidden; 
+                font-family: 'Cast W01 Medium', monospace;
+                font-size: 13px;
+                color: #F8F8FF;
+            }
+
+            .Blink {
+                animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+            }
+
+            @keyframes blinker {  
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+
+            .top-right{
+                float: right;
+                width: auto;
+                text-align: right;
+            }
+            
+            .top-right-container{
+                float: right;
+                width: auto;
+                text-align: right;
+                background-color: rgba(0,0,0,0.5);
+                padding: 5px;
+                margin: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius:10px;
+                border-radius:10px;
+                display: none;
+            }
+
+            .container{
+                width: 100wh;
+                height: 100vh;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Axon Bodycam Wuptis</title>
+    </head>
+
+    <body>
+        <div class="top-right-container">
+            <div class="top-right">
+                <img src="https://i.imgur.com/DJKWDuE.png" width="48" height="48" border="0">
+            </div>
+            <div class="top-right">
+                REC&nbsp;<i class="fa fa-circle text-danger Blink"></i>&nbsp;&nbsp;Axon Body Cam&trade;&nbsp;&nbsp;<br />
+                <span id="player">XXX</span>
+                <span id="callsign">[000]</span>&nbsp;&nbsp;<br />
+                <span id="agency">Los Angeles Police Department</span>&nbsp;&nbsp;<br />                
+                <span style="padding:0px;margin:0px;" id="month">XXX</span>
+            </div>
+        </div>
+    </body>
+
+</html>
