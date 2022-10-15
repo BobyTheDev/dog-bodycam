@@ -1,21 +1,9 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local PlayerData = QBCore.Functions.GetPlayerData()
+PlayerJob = {}
 
-Citizen.CreateThread(function ()
-    while QBCore == nil do
-        Citizen.Wait(0)
-        TriggerEvent("QBCore:GetObject", function (obj) QBCore = obj
-        end)
-        while QBCore.Functions.GetPlayerData() == nil do
-            Citizen.Wait(10)
-        end
-        PlayerData = QBCore.Functions.GetPlayerData()
-    end
-end)
-
-RegisterNetEvent("QBCore:Client:OnJobUpdate")
-AddEventHandler("QBCore:Client:OnJobUpdate", function (meslk)
-    PlayerData.job = meslk
+RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
+    PlayerJob = JobInfo
 end)
 
 local year --[[ integer ]], month --[[ integer ]], day --[[ integer ]], hour --[[ integer ]], minute --[[ integer ]], second --[[ integer ]] = GetLocalTime()
@@ -30,8 +18,9 @@ end)
 
 RegisterNetEvent("dog-bodycam:openBoy")
 AddEventHandler("dog-bodycam:openBoy", function (item, h,m,s)
-    if PlayerData.job.name == "police" then
-        if PlayerData.charinfo.gender == "0" then
+    local Player = QBCore.Functions.GetPlayerData()
+    if Player.job.name == "police" then
+        if Player.charinfo.gender == "0" then
             gender = Config.Gender2
         else
             gender = Config.Gender1
@@ -46,8 +35,8 @@ AddEventHandler("dog-bodycam:openBoy", function (item, h,m,s)
         else
             SendNUIMessage({
                 action = "showbodycam",
-                player = PlayerData.job.grade.name.. " "..gender.." "..PlayerData.charinfo.firstname,
-                callsign = "["..PlayerData.metadata['callsign'].."]",
+                player = Player.job.grade.name.. " "..gender.." "..Player.charinfo.lastname,
+                callsign = "["..Player.metadata['callsign'].."]",
                 tarih = day.."/"..month.."/"..year.." ".." - "..h..":"..m..":"..s.." GMT+3",
             })
             TriggerServerEvent("booleanuodate", true)
