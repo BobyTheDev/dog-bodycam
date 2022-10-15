@@ -19,6 +19,8 @@ Discord server: https://discord.gg/qZNrCuu65k
 
 4. Add as your last resource in your server.cfg "ensure dog-bodycam"
 
+5. You can also add it to your police armory so officers can grab it more easily!
+
 ## PREVIEW
 
 ![My Image](https://user-images.githubusercontent.com/18469253/195879766-072fb823-d236-4b6f-89a2-6fc27537c6a9.png)
