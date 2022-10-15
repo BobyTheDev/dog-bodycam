@@ -23,4 +23,7 @@ Discord server: https://discord.gg/qZNrCuu65k
 
 ![My Image](https://user-images.githubusercontent.com/18469253/195879766-072fb823-d236-4b6f-89a2-6fc27537c6a9.png)
 
-## 
+## RESOURCE MONITOR
+![My Image](https://cdn.discordapp.com/attachments/873289704739594270/1030819833144680458/unknown.png)
+
+##
