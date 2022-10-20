@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'Dog#7087'
 description 'Axon Body Cam for QBCore'
-version '1.0.0'
+version '1.0.2'
 
 lua54 'yes'
 
