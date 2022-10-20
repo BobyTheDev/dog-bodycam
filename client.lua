@@ -30,15 +30,26 @@ AddEventHandler("dog-bodycam:openBoy", function (item, h,m,s)
             SendNUIMessage({
                 action = "hidebodycam"
             })
+            if Config.okokNotify then
+                exports['okokNotify']:Alert('Success', 'You stopped your Body Camera!', 5000, 'info')
+            elseif Config.QBNotify then
+                TriggerEvent("QBCore:Notify", "Successfully you stopped your Body Camera!", "success", 2500)
+                end
             TriggerServerEvent("booleanuodate", false)
-
-        else
+            
+             else
             SendNUIMessage({
                 action = "showbodycam",
                 player = Player.job.grade.name.. " "..gender.." "..Player.charinfo.lastname,
                 callsign = "["..Player.metadata['callsign'].."]",
                 tarih = day.."/"..month.."/"..year.." ".." - "..h..":"..m..":"..s.." GMT+3",
             })
+            if Config.okokNotify then
+            exports['okokNotify']:Alert('Success', 'You turned on your Body Camera!', 5000, 'info')
+            elseif Config.QBNotify then
+            TriggerEvent("QBCore:Notify", "Success you turned on your Body Camera!", "success", 2500)
+        end
+        
             TriggerServerEvent("booleanuodate", true)
             acik = true
         end
