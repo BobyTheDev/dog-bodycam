@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'Dog#7087'
 description 'Axon Body Cam for QBCore'
-version '1.0.1'
+version '1.0.0'
 
 lua54 'yes'
 
@@ -26,11 +26,6 @@ files {
     "index.html"
 }
 
-escrow_ignore {
-	"index.html",
-	"config.lua",
-	"server.lua"
+dependencies {
+    'qb-core'
 }
-
-
-dependency '/assetpacks'
